@@ -1,8 +1,12 @@
 # 🕸️ Atividade 01
 
-> ## Use `npm start (numero da questao)` para testar o codigo de cada questão da atividade
+> ### Use `npm start (numero da questao) //(link)` para testar o codigo de cada questão da atividade
 >
-> > ### exemplo: `npm start 1`.
+> > #### exemplo: `npm start 1`.
+> >
+> > #### caso queira passar um link ` npm start 2 htpps://google.com` 
+> >
+> >  
 
 
 

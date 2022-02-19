@@ -3,7 +3,7 @@ import baixarPng from './questoes/atv01_q03.js'
 import getlinks from './questoes/atv01_q04.js'
 
 
-const exemplos = questao => {
+const exemplos = (questao, link="") => {
     let num = parseInt(questao)
 
     switch (num) {
@@ -12,15 +12,15 @@ const exemplos = questao => {
             break;
 
         case 2:
-            geturl('https://google.com')
+            geturl(link || 'https://google.com')
             break;
         
         case 3:
-            baixarPng('https://a.espncdn.com/i/teamlogos/soccer/500/819.png')
+            baixarPng(link || 'https://a.espncdn.com/i/teamlogos/soccer/500/819.png')
             break;
         
         case 4:
-            getlinks('https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll')
+            getlinks(link || 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll')
             break;
 
         default:
@@ -28,5 +28,6 @@ const exemplos = questao => {
     }
 }
 
+const params = process.argv.slice(2)
 
-exemplos(process.argv.slice(2)[0])
+exemplos(params[0], params[1]||"")

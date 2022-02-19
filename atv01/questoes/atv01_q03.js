@@ -1,6 +1,7 @@
 import axios from "axios";
 import fs from 'fs';
 
+
 const baixarPng = url => {
     axios.get(url, {responseType: 'stream', responseEncoding: 'binary'}).then(
         res => {

@@ -1,10 +1,12 @@
 # 🕸️ Atividade 01
 
+> #### Começe com ` cd atv01`
+
 > ### Use `npm start (numero da questao) //(link)` para testar o codigo de cada questão da atividade
 >
 > > #### exemplo: `npm start 1`.
 > >
-> > #### caso queira passar um link ` npm start 2 htpps://google.com` 
+> > #### caso queira passar um link ` npm start 2 htpps://google.com`
 > >
 > >  
 
@@ -68,5 +70,5 @@
 
 ## 🔗 Links:
 
-> - 📹️[Video de explicação](https://www.youtube.com/watch?v=SXKX7u6yPnY)
+> - 📹️[Video de explicação](https://youtu.be/GNXA8KHq5Xk)
 

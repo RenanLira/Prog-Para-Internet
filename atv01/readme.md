@@ -37,7 +37,7 @@
 >const baixarPng = url => {
 >      axios.get(url, {responseType: 'stream', responseEncoding: 'binary'}).then(
 >          res => {
->              res.data.pipe(fs.createWriteStream('downloadQuestion/image.png'))
+>              res.data.pipe(fs.createWriteStream('download/image.png'))
 >              .on('finish', () => {
 >                  console.log('Download Concluido');
 >              })

@@ -5,7 +5,7 @@ import fs from 'fs';
 const baixarPng = url => {
     axios.get(url, {responseType: 'stream', responseEncoding: 'binary'}).then(
         res => {
-            res.data.pipe(fs.createWriteStream('./questoes/downloadQuestion/image.png'))
+            res.data.pipe(fs.createWriteStream('./questoes/download/image.png'))
             .on('finish', () => {
                 console.log('Download Concluido');
             })

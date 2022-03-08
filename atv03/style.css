@@ -1,0 +1,112 @@
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+/* RESET CSS */
+
+
+/* GLOBAL PARA ELEMENTOS DE FORMULARIOS */
+label{
+    font-weight: 700;
+}
+
+input{
+    width: 100%;
+    height: 25px;
+    padding: 2px;
+
+    border: none;
+    border-bottom: solid 1px black;
+    
+    background-color: transparent;
+    color: white;
+
+    transition: 0.2s;
+
+}
+input:focus{
+    margin-top: 15px;
+    outline: none;
+    border-bottom: solid 3px black;
+}
+/* FIM GLOBAL PARA ELEMENTOS DE FORMULARIOS */
+
+
+/* CODIGO CENTRALIZAÇÃO */
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    height: 100vh;
+
+    background-color: #f0f0f0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* FIM CODIGO CENTRALIZAÇÃO */
+
+
+/* FORMULARIO GLOBAL */
+.content form{
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 20%;
+    height: 40%;
+    padding: 20px;
+
+    border-radius: 4px;
+    box-shadow: 5px 5px 20px 3px #3b3b3b48;
+
+}
+
+form .user, form .password, form .form-button{
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+}
+
+form .form-button a{
+    
+    width: 100%;
+    height: 30px;
+    
+    background-color: #396951;
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+form .form-button a:hover{
+    background-color: #273b30;
+}
+/* FIM FORMULARIO GLOBAL */
+
+
+/* FORMULARIO LOGIN */
+.content .login{
+    margin-right: 20px;
+
+    background-color: #64b68d;
+}
+/* FIM FORMULARIO LOGIN */
+
+
+/* ESTILIZAÇÃO FORMULARIO CADASTRO */
+.content .cadastro{
+    color: white;
+    background-color: #313633;
+}
+
+.cadastro input{
+    border-color: white;
+}
+/* FIM ESTILIZAÇÃO FORMULARIO CADASTRO*/

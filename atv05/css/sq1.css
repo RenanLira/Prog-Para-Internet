@@ -1,0 +1,26 @@
+:root{
+    --bkg-primary: #41614f;
+    --bkg-secundary: #75b994;
+    --bkg-secundary-two: #92ecbb;
+}
+
+header{
+    background-color: var(--bkg-primary);
+}
+
+main section:nth-child(2){
+    background-color: var(--bkg-secundary-two);
+}
+
+aside{
+    background-color: var(--bkg-secundary);
+}
+
+footer{
+    background-color: var(--bkg-primary);
+
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+}

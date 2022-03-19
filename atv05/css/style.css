@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    align-items: center;
+
+    height: 100px;
+}
+
+main div a{
+    margin-bottom: 30px;
+}
+main div a:nth-last-child(){
+    margin-right: 0;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 10px;
+    height: 400px;
+}
+
+iframe{
+    height: 300px;
+}

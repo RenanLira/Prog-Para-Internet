@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    /* font-family: 'VT323', monospace; */
+    font-family: 'DM Mono', monospace;
+}
+h3, h4{
+    font-size: 4rem;
+}
+p{
+    font-size: 1.3rem;
+}
+.container{
+    width: 100%;
+    height: 100%;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.content {
+    width: 75%;
+    margin: 0 auto;
+}
+.header-grid{
+    display: grid;
+    grid-template-rows: 90px auto;
+}
+/* HEADER */
+header{
+    display: grid;
+    height: 100vh;
+    background-image: url('galaxy-g741f44c11_1280.png');
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+    scroll-snap-align: start;
+}
+/* NAV */
+nav{
+    box-shadow: 0px 3px 71px -19px rgba(255, 255, 255, 0.301);
+}
+nav .content{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 90px;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+nav .logo h1{
+    font-size: larger;
+}
+nav .menu ul{
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    height: 100%;
+}
+nav .menu ul li{
+    display: flex;
+    justify-content: center;
+}
+/* SECTION */
+section{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    
+}
+section h2 {
+    font-size: 6rem;
+    position: relative;
+}
+section h2::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0); 
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 22px;
+    background-color: blueviolet;
+}
+/* FIM HEADER */
+
+/* MAIN */
+.main-grid{
+    display: grid;
+    grid-template-rows: repeat(2, 100vh);
+    grid-template-columns: 100%;
+}
+
+main article{
+    scroll-snap-align: start;
+}
+main .sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+main .info{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+main .info div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,16 @@
+@media only screen and (max-width: 912px) {
+    :root{
+        font-size: 8px;
+        --container-value: 95vw;
+    }
+    main article .detalhes{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 1294px) {
+    :root{
+        font-size: 8px;
+        --container-value: 95vw;
+    }
+}

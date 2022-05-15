@@ -24,13 +24,44 @@ app.delete('/posts/:id', (req, res) => {
 
 app.put('/posts/:id', (req, res) => {
 
-    post = {
-        id: req.params.id,
+    const post = {
+        id: parseInt(req.params.id),
         text: req.body.text,
-        like: req.body.like
+        like: parseInt(req.params.like)
     }
 
     res.json(blog.update(post))
+})
+
+app.patch('/posts/:id', (req, res) => {
+
+    const post = blog.retrieve(parseInt(req.params.id))
+
+    if (post){
+        res.json(blog.update({
+            id: post.id,
+            text: req.body.text || post.text,
+            like: req.body.like || post.like
+        }))
+    } else {
+        res.status(404).json({text: "não encontrado"})
+    }
+
+})
+
+app.post('/posts/:id/like', (req, res) => {
+
+    const post = blog.retrieve(parseInt(req.params.id))
+
+    if (post){
+        res.json(blog.update({
+            ...post,
+            like: post.like + 1
+        }))
+    } else {
+        res.status(404).json({text: "não encontrado"})
+    }
+
 })
 
 app.post('/posts', (req, res) => {
@@ -42,8 +73,10 @@ app.post('/posts', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.status(200)
+    res.status(200).json({'text': 'ok'})
 })
+
+
 
 app.listen(port, ()=> {
     console.log(`Servidor esta rodando na porta ${port}`)

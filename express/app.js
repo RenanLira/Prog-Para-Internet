@@ -15,7 +15,9 @@ app.get('/posts', (req, res) => {
 })
 
 app.get('/posts/:id', (req, res) => {
-    res.json(blog.retrieve(req.params.id))
+    let post = blog.retrieve(req.params.id)
+    
+    post ? res.json(post) : res.status(404).json({text: "não encontrado"}) 
 })
 
 app.delete('/posts/:id', (req, res) => {
